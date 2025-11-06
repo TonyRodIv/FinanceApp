@@ -1,0 +1,90 @@
+.head {
+  width: 95dvw;
+  max-width: 40rem;
+  height: 6.25rem;
+  padding: 1rem 2rem;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+
+  align-items: end;
+  margin: 0 auto;
+}
+
+.titleHead {
+  font-size: 2rem;
+}
+
+.pfpHead {
+  width: 50px;
+  border-radius: 100%;
+  justify-self: end;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: end;
+}
+
+.infoBox{
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.infoBox.dangerLight {
+  justify-self: end;
+  text-align: end;
+}
+
+.infoBox.dangerLight .infoLabel, .infoBox.sucessLight .infoLabel{
+  font-size: 1rem;
+}
+.infoBox.dangerLight .infoValue, .infoBox.sucessLight .infoValue{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+
+
+.financeMainCard {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  margin: 0 auto;
+}
+
+.paymentStatusCard{
+  display: grid;
+  gap: 0.3rem;
+}
+
+.progress {
+  width: 100%;
+  background-color: #DEF8E5;
+  overflow: hidden;
+  height: 4.5rem;
+  border-radius: 1.75rem;
+}
+
+.progressBar {
+  height: 100%;
+  width: 60%;
+  /* border-radius: 0 0.5rem 0.5rem 0;  */
+  border-right: 0.3rem solid black;
+  transition: width 0.5s ease;
+}
+
+.installmentStatus{
+  text-align: center;
+}
+
+/* .progressBar {
+  animation: loading 8s infinite;
+}
+
+@keyframes loading {
+  0% { width: 0; }
+  100% { width: 100%; }
+} */

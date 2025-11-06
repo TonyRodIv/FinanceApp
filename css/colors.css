@@ -1,0 +1,39 @@
+:root {
+  --color-danger-light: #FF7C74;
+  --color-success-light: #77D990;
+
+  --color-success-primary: #34C759;
+  --color-alert-primary: #FC0;
+}
+
+.dangerLight {
+    color: var(--color-danger-light);
+}
+
+.sucessLight {
+    color: var(--color-success-light);
+}
+
+.sucess {
+    color: var(--color-success-primary);
+}
+
+.alert {
+    color: var(--color-alert-primary);
+}
+
+.dangerLightBG {
+    background-color: var(--color-danger-light);
+}
+
+.sucessLightBG {
+    background-color: var(--color-success-light);
+}
+
+.sucessBG {
+    background-color: var(--color-success-primary);
+}
+
+.alertBG {
+    background-color: var(--color-alert-primary);
+}

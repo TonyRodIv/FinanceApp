@@ -1,24 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/main.css">
-    <link rel="stylesheet" href="public/individuals.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/individuals.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/colors.css">
     <title> FinanceApp BETA</title>
 </head>
+
 <body>
-    <section class="betaAlert">VERSÃO DE VISUALIZAÇÃO (PREVIEW)</section>
+    <section class="betaAlert">VERSÃO DE VISUALIZAÇÃO </section>
+    <section class="head">
+        <h2 class="titleHead">Bem vindo!</h2>
+        <img src="public/pfpbeeta.jpg" alt="" class="pfpHead">
+    </section>
     <main class="card financeMainCard">
         <h2 class="cardTitle">Nintendo Switch</h2>
 
-        <article class="progress">
-            <div class="progressBar greenBG"></div>
-        </article>
+        <section class="paymentStatusCard">
+            <section class="infoRow">
+                <div class="infoBox sucessLight">
+                    <span class="infoLabel">Total pago</span>
+                    <span class="infoValue greenText">R$ 2.504,92</span>
+                </div>
+                <div class="infoBox dangerLight">
+                    <span class="infoLabel">Total restante</span>
+                    <span class="infoValue redText">R$ 1.594,04</span>
+                </div>
+            </section>
+
+            <article class="progress">
+                <div class="progressBar sucessBG"></div>
+                <span class="progressText">R$ 4.099,99</span>
+            </article>
+            <p class="installmentStatus">11 de 18 Parcelas pagas</p>
+        </section>
+
+
         <section class="btnRow">
-            <button class="largeBtn greenBG">Pagar uma Parcela</button>
-            <button class="largeBtn alertBG">Desfazer Pagamento</button>
+            <button class="largeBtn sucessBG">Pagar</button>
+            <button class="largeBtn alertBG">Desfazer</button>
         </section>
     </main>
 </body>
+
 </html>

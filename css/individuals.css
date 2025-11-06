@@ -11,6 +11,12 @@
   align-items: end;
   margin: 0 auto;
 }
+.subHead {
+  width: 95dvw;
+  max-width: 40rem;
+  padding: 1rem 2rem 0 2rem;
+  margin: 0 auto;
+}
 
 .titleHead {
   font-size: 2rem;
@@ -72,7 +78,7 @@
   height: 100%;
   width: 60%;
   /* border-radius: 0 0.5rem 0.5rem 0;  */
-  border-right: 0.3rem solid black;
+  border-right: 0.2rem solid black;
   transition: width 0.5s ease;
 }
 
@@ -88,3 +94,16 @@
   0% { width: 0; }
   100% { width: 100%; }
 } */
+
+.linkCards {
+  display: grid;
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 0.625rem;
+  padding: 0.625rem;
+
+  scroll-snap-type: x mandatory;
+  width: 40rem;
+  margin: 0 auto;
+}
+

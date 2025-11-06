@@ -103,7 +103,7 @@
   padding: 0.625rem;
 
   scroll-snap-type: x mandatory;
-  width: 40rem;
+  max-width: 40rem;
   margin: 0 auto;
 }
 

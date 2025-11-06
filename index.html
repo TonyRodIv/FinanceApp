@@ -20,26 +20,26 @@
         <h2 class="titleHead">Bem vindo!</h2>
         <img src="public/pfpbeeta.jpg" alt="" class="pfpHead">
     </section>
-    <main class="card financeMainCard">
-        <h2 class="cardTitle">Nintendo Switch</h2>
+    <main class="card financeMainCard" id="financeMainCard">
+        <h2 class="cardTitle" id="payName">Nome da Dívida</h2>
 
         <section class="paymentStatusCard">
             <section class="infoRow">
                 <div class="infoBox sucessLight">
                     <span class="infoLabel">Total pago</span>
-                    <span class="infoValue greenText">R$ 2.504,92</span>
+                    <span class="infoValue greenText" id="paidValue">R$#.###,##</span>
                 </div>
                 <div class="infoBox dangerLight">
                     <span class="infoLabel">Total restante</span>
-                    <span class="infoValue redText">R$ 1.594,04</span>
+                    <span class="infoValue redText" id="missValue">R$#.###,##</span>
                 </div>
             </section>
 
             <article class="progress">
                 <div class="progressBar sucessBG"></div>
-                <span class="progressText">R$ 4.099,99</span>
+                <span class="progressText">R$#.###,##</span>
             </article>
-            <p class="installmentStatus">11 de 18 Parcelas pagas</p>
+            <p class="installmentStatus">## de ## Parcelas pagas</p>
         </section>
 
 
@@ -67,6 +67,8 @@
         </div>
     </main>
     <div class="head"></div>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>

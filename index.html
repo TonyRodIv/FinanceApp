@@ -12,10 +12,12 @@
 </head>
 
 <body>
-    <section class="navContainer">
+    <section class="navContainer" id="previewNav">
         <div class="nav">
             PREVIEW
-        </div> </section>
+        </div>
+    </section>
+
     <section class="head">
         <h2 class="titleHead">Bem vindo!</h2>
         <img src="public/pfpbeeta.jpg" alt="" class="pfpHead">
@@ -36,20 +38,20 @@
             </section>
 
             <article class="progress">
-                <div class="progressBar sucessBG"></div>
+                <div class="progressBar sucessBG" id="paidBar"></div>
                 <span class="progressText">R$#.###,##</span>
             </article>
-            <p class="installmentStatus">## de ## Parcelas pagas</p>
+            <p class="installmentStatus" id="installmentsInfo">## de ## Parcelas pagas</p>
         </section>
 
 
         <section class="btnRow">
-            <button class="largeBtn sucessBG">Pagar</button>
-            <button class="largeBtn alertBG">Antecipar</button>
+            <button class="largeBtn sucessBG" id="payBtn">Pagar</button>
+            <button class="largeBtn alertBG" id="redoBtn">Desfazer</button>
         </section>
     </main>
     <div class="subHead">
-        <h2 class="titleHead">Atalhos</h2>
+        <h2 class="cardTitle">Atalhos</h2>
     </div>
 
     <main class="linkCards">

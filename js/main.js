@@ -8,16 +8,31 @@ const missValue = document.getElementById('missValue');
 const paidBar = document.getElementById('paidBar');
 const installmentsInfo = document.getElementById('installmentsInfo');
 
-let debtName = localStorage.getItem('debtName');
-let installmentsPaid = parseInt(localStorage.getItem('installmentsPaid')) || 1;
-let installmentsTotal = parseInt(localStorage.getItem('installmentsTotal')) || 20;
-let totalDebt = parseFloat(localStorage.getItem('totalDebt')) || 4099;
+let debtName;
+let installmentsPaid;
+let installmentsTotal;
+let totalDebt;
+
+window.carregarDados = function() {
+    debtName = localStorage.getItem('debtName') || 'Dívida Exemplo';
+    installmentsPaid = parseInt(localStorage.getItem('installmentsPaid')) || 0;
+    installmentsTotal = parseInt(localStorage.getItem('installmentsTotal')) || 10;
+    totalDebt = parseFloat(localStorage.getItem('totalDebt')) || 1000;
+}
+
+carregarDados();
 
 function loadInfo() {
-    let totalPaid = (totalDebt / installmentsTotal * installmentsPaid)
+    carregarDados();
+
+    let totalPaid = (totalDebt / installmentsTotal * installmentsPaid);
+    
+    if (isNaN(totalPaid)) totalPaid = 0;
+
     payName.innerHTML = debtName;
     paidValue.innerHTML = formatToBRL(totalPaid);
-    missValue.innerHTML = formatToBRL(totalDebt);
+    missValue.innerHTML = formatToBRL(totalDebt - totalPaid);
+
     installmentsInfo.innerHTML = `${installmentsPaid} de ${installmentsTotal} Parcelas pagas`
 
     setTimeout(() => {
@@ -26,19 +41,22 @@ function loadInfo() {
 }
 
 payBtn.addEventListener('click', function () {
-    if (installmentsPaid <installmentsTotal) {
-        installmentsPaid = installmentsPaid + 1
+    if (installmentsPaid < installmentsTotal) {
+        installmentsPaid = installmentsPaid + 1;
+    
+        localStorage.setItem('installmentsPaid', installmentsPaid);
+        
+        loadInfo();
     }
-    console.log(installmentsPaid)
-    loadInfo()
 });
 
 redoBtn.addEventListener('click', function () {
     if (installmentsPaid > 0) {
-        installmentsPaid = installmentsPaid - 1
+        installmentsPaid = installmentsPaid - 1;
+        localStorage.setItem('installmentsPaid', installmentsPaid);
+        
+        loadInfo();
     }
-    console.log(installmentsPaid)
-    loadInfo()
 });
 
 

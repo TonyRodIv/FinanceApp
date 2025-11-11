@@ -41,6 +41,7 @@ function showStep(stepId) {
 
 document.getElementById('nextStep2').addEventListener('click', () => {
     formData.debtName = document.getElementById('inputDebtName').value;
+
     showStep('step2');
 });
 

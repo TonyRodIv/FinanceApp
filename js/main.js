@@ -8,15 +8,10 @@ const missValue = document.getElementById('missValue');
 const paidBar = document.getElementById('paidBar');
 const installmentsInfo = document.getElementById('installmentsInfo');
 
-let debtName = localStorage.getItem('debtName') || 'Nintendo Switch 2';
+let debtName = localStorage.getItem('debtName');
 let installmentsPaid = parseInt(localStorage.getItem('installmentsPaid')) || 1;
 let installmentsTotal = parseInt(localStorage.getItem('installmentsTotal')) || 20;
 let totalDebt = parseFloat(localStorage.getItem('totalDebt')) || 4099;
-
-
-
-
-
 
 function loadInfo() {
     let totalPaid = (totalDebt / installmentsTotal * installmentsPaid)

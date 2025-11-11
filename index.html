@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/steps.css">
     <link rel="stylesheet" href="css/individuals.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/colors.css">
@@ -25,12 +26,49 @@
         </section>
 
         <div class="modalIntro" id="modalIntro">
-            <div class="textModal">
-                <h2 class="titleHead" id="titleModal">Seja bem vindo</h2>
-                <p class="subTextTitle" id="subtitleModal">Para começar, precisamos de algumas informações</p>
+            <div class="form-step active" id="step0">
+                <div class="textModal">
+                    <h2 class="titleHead" id="titleModal">Seja bem vindo</h2>
+                    <p class="subTextTitle" id="subtitleModal">Para começar, precisamos de algumas informações</p>
+                </div>
+                <button class="largeBtn oceanBlue" id="startBtn">Começar</button>
+                <a class="subTextTitle" href="https://github.com/TonyRodIv">@TonyRodIv</a>
             </div>
-            <button class="largeBtn oceanBlue" id="startBtn">Começar</button>
-            <a class="subTextTitle" href="https://github.com/TonyRodIv" >@TonyRodIv</a>
+
+            <div class="form-step" id="step1">
+                <div class="textModal">
+                    <h2 class="titleHead">Adicionar Dívida</h2>
+                    <p class="subTextTitle">Qual o nome da sua dívida?</p>
+                </div>
+                <input type="text" id="inputDebtName" placeholder="Ex: Nintendo Switch 2">
+                <section class="btnRow">
+                    <button class="largeBtn translucentStyle" onclick="reload()">Voltar</button>
+                    <button class="largeBtn oceanBlue" id="nextStep2">Continuar</button>
+                </section>
+            </div>
+
+            <div class="form-step" id="step2">
+                <div class="textModal">
+                    <h2 class="titleHead">Valor</h2>
+                    <p class="subTextTitle">Digite o valor total a ser parcelado</p>
+                </div>
+                <input type="number" id="inputTotalDebt" placeholder="R$ 4099,00">
+                <section class="btnRow">
+                    <button class="largeBtn translucentStyle" id="prevStep1">Voltar</button>
+                    <button class="largeBtn oceanBlue" id="nextStep3">Continuar</button>
+                </section>
+            </div>
+            <div class="form-step" id="step3">
+                <div class="textModal">
+                    <h2 class="titleHead">Parcelas</h2>
+                    <p class="subTextTitle">Digite o número de parcelas</p>
+                </div>
+                <input type="number" id="inputInstallments" placeholder="20">
+                <section class="btnRow">
+                    <button class="largeBtn translucentStyle" id="prevStep2">Voltar</button>
+                    <button class="largeBtn oceanBlue" id="finishForm">Concluir</button>
+                </section>
+            </div>
         </div>
     </section>
 
@@ -42,7 +80,7 @@
         </section>
         <main class="card financeMainCard" id="financeMainCard">
             <h2 class="cardTitle" id="payName">Nome da Dívida</h2>
-    
+
             <section class="paymentStatusCard">
                 <section class="infoRow">
                     <div class="infoBox sucessLight">
@@ -54,15 +92,15 @@
                         <span class="infoValue redText" id="missValue">R$#.###,##</span>
                     </div>
                 </section>
-    
+
                 <article class="progress">
                     <div class="progressBar sucessBG" id="paidBar"></div>
                     <span class="progressText">R$#.###,##</span>
                 </article>
                 <p class="installmentStatus" id="installmentsInfo">## de ## Parcelas pagas</p>
             </section>
-    
-    
+
+
             <section class="btnRow">
                 <button class="largeBtn sucessBG" id="payBtn">Pagar</button>
                 <button class="largeBtn alertBG" id="redoBtn">Desfazer</button>
@@ -71,7 +109,7 @@
         <div class="subHead">
             <h2 class="cardTitle">Atalhos</h2>
         </div>
-    
+
         <main class="linkCards">
             <div class="cardMedium">
             </div>

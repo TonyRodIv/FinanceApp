@@ -1,0 +1,11 @@
+.form-step {
+    display: none;
+    
+    grid-template-rows: min-content auto;
+    gap: 1.4rem;
+}
+
+.form-step.active {
+    display: grid;
+    animation: appear 0.5s ease forwards;
+}

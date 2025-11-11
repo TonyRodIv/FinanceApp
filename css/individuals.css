@@ -26,6 +26,7 @@
   width: 50px;
   border-radius: 100%;
   justify-self: end;
+  background-color: black;
 }
 
 .infoRow {
@@ -71,7 +72,7 @@
   background-color: #DEF8E5;
   overflow: hidden;
   height: 4rem;
-  border-radius: 1.6rem;
+  border-radius: 1.4rem;
 }
 
 .progressBar {

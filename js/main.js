@@ -13,7 +13,8 @@ let installmentsPaid = 1
 let installmentsTotal = 20
 let totalDebt = 4099
 
-loadInfo()
+
+
 
 function loadInfo() {
     let totalPaid = (totalDebt / installmentsTotal * installmentsPaid)

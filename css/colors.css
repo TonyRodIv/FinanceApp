@@ -1,9 +1,15 @@
 :root {
-  --color-danger-light: #FF7C74;
-  --color-success-light: #77D990;
+    --color-danger-light: #FF7C74;
+    --color-success-light: #77D990;
 
-  --color-success-primary: #34C759;
-  --color-alert-primary: #FC0;
+    --color-success-primary: #34C759;
+    --color-alert-primary: #FC0;
+
+    --color-oceanblue-primary: #008D87;
+}
+
+.oceanBlue {
+    background-color: var(--color-oceanblue-primary);
 }
 
 .dangerLight {
@@ -36,4 +42,10 @@
 
 .alertBG {
     background-color: var(--color-alert-primary);
+}
+
+.translucentStyle {
+    border: 1px solid rgba(74, 74, 74, 0.58);
+    background: rgba(53, 53, 53, 0.50);
+    color: rgba(255, 255, 255, 0.80);
 }

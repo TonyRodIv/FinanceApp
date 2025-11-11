@@ -5,77 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/intro.css">
     <link rel="stylesheet" href="css/individuals.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/colors.css">
     <title> FinanceApp BETA</title>
 </head>
 
-<body>
-    <section class="navContainer" id="previewNav">
+<body id="body">
+    <section class="navContainer" id="previewNav" style="display: none;">
         <div class="nav">
             PREVIEW
         </div>
     </section>
 
-    <section class="head">
-        <h2 class="titleHead">Bem vindo!</h2>
-        <img src="public/pfpbeeta.jpg" alt="" class="pfpHead">
+    <section class="intro">
+        <section class="head" id="temporaryTitleIntro">
+            <h2 class="titleHead">FinanceApp</h2>
+        </section>
+
+        <div class="modalIntro" id="modalIntro">
+            <div class="textModal">
+                <h2 class="titleHead" id="titleModal">Seja bem vindo</h2>
+                <p class="subTextTitle" id="subtitleModal">Para começar, precisamos de algumas informações</p>
+            </div>
+            <button class="largeBtn oceanBlue" id="startBtn">Começar</button>
+            <a class="subTextTitle" href="https://github.com/TonyRodIv" >@TonyRodIv</a>
+        </div>
     </section>
-    <main class="card financeMainCard" id="financeMainCard">
-        <h2 class="cardTitle" id="payName">Nome da Dívida</h2>
 
-        <section class="paymentStatusCard">
-            <section class="infoRow">
-                <div class="infoBox sucessLight">
-                    <span class="infoLabel">Total pago</span>
-                    <span class="infoValue greenText" id="paidValue">R$#.###,##</span>
-                </div>
-                <div class="infoBox dangerLight">
-                    <span class="infoLabel">Total restante</span>
-                    <span class="infoValue redText" id="missValue">R$#.###,##</span>
-                </div>
+
+    <section id="paymentHome" style="display: none;">
+        <section class="head">
+            <h2 class="titleHead">Bem vindo!</h2>
+            <img src="#" alt="" class="pfpHead" id="pfpHead">
+        </section>
+        <main class="card financeMainCard" id="financeMainCard">
+            <h2 class="cardTitle" id="payName">Nome da Dívida</h2>
+    
+            <section class="paymentStatusCard">
+                <section class="infoRow">
+                    <div class="infoBox sucessLight">
+                        <span class="infoLabel">Total pago</span>
+                        <span class="infoValue greenText" id="paidValue">R$#.###,##</span>
+                    </div>
+                    <div class="infoBox dangerLight">
+                        <span class="infoLabel">Total restante</span>
+                        <span class="infoValue redText" id="missValue">R$#.###,##</span>
+                    </div>
+                </section>
+    
+                <article class="progress">
+                    <div class="progressBar sucessBG" id="paidBar"></div>
+                    <span class="progressText">R$#.###,##</span>
+                </article>
+                <p class="installmentStatus" id="installmentsInfo">## de ## Parcelas pagas</p>
             </section>
+    
+    
+            <section class="btnRow">
+                <button class="largeBtn sucessBG" id="payBtn">Pagar</button>
+                <button class="largeBtn alertBG" id="redoBtn">Desfazer</button>
+            </section>
+        </main>
+        <div class="subHead">
+            <h2 class="cardTitle">Atalhos</h2>
+        </div>
+    
+        <main class="linkCards">
+            <div class="cardMedium">
+            </div>
+            <div class="cardMedium">
+            </div>
+            <div class="cardMedium">
+            </div>
+            <div class="cardMedium">
+            </div>
+            <div class="cardMedium">
+            </div>
+            <div class="cardMedium">
+            </div>
+        </main>
+    </section>
 
-            <article class="progress">
-                <div class="progressBar sucessBG" id="paidBar"></div>
-                <span class="progressText">R$#.###,##</span>
-            </article>
-            <p class="installmentStatus" id="installmentsInfo">## de ## Parcelas pagas</p>
-        </section>
 
-
-        <section class="btnRow">
-            <button class="largeBtn sucessBG" id="payBtn">Pagar</button>
-            <button class="largeBtn alertBG" id="redoBtn">Desfazer</button>
-        </section>
-    </main>
-    <div class="subHead">
-        <h2 class="cardTitle">Atalhos</h2>
-    </div>
-
-    <main class="linkCards">
-        <div class="cardMedium">
-        </div>
-        <div class="cardMedium">
-        </div>
-        <div class="cardMedium">
-        </div>
-        <div class="cardMedium">
-        </div>
-        <div class="cardMedium">
-        </div>
-        <div class="cardMedium">
-        </div>
-    </main>
-    <div class="head"></div>
-    <main class="card financeMainCard">
-        <div class="cardMedium">
-        </div>
-        <div class="cardMedium">
-        </div>
-    </main>
     <script src="js/main.js"></script>
+    <script src="js/transition.js"></script>
 </body>
 
 </html>

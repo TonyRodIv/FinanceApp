@@ -19,6 +19,8 @@ startBtn.addEventListener('click', function(){
     setTimeout(() => {
         modalIntro.innerHTML += '<section class="btnRow"><button class="largeBtn translucentStyle"id="redoModalBtn" onclick="recarregarSite()">Voltar</button><button class="largeBtn oceanBlue"id="startBtn">Começar</button></section>'
         modalIntro.style.borderRadius = '0'
+
+        
     }, 850);
 })
 

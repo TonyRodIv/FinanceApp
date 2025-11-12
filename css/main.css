@@ -11,7 +11,7 @@ body {
     width: 100dvw;
     height: 100dvh;
     /* background: linear-gradient(0deg, #0F5850 0%, #385643 100%); */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), conic-gradient(from 180deg at 50% 50%, #1C1C1C 0deg, #008D87 360deg);
+    background-color: #181818;
     transition: background 1s ease-in-out;
     background-size: cover;
     color: #F9F9F9;
@@ -32,7 +32,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 0.5rem;
-    background: linear-gradient(0deg, rgba(36, 36, 36, 0.603) 0%, rgba(51, 51, 51, 0.00) 90%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.603) 0%, rgba(0, 0, 0, 0) 90%);
 }
 
 .nav {
@@ -53,7 +53,7 @@ body {
 /* cards */
 .card {
     background: rgba(28, 28, 28, 0.60);
-    box-shadow: 0 4px 16px 0 rgba(80, 80, 80, 0.25);
+    box-shadow: 0 4px 16px 0 rgba(54, 54, 54, 0.25);
     border: 1.5px solid rgba(135, 135, 135, 0.2);
 
     -webkit-backdrop-filter: blur(25px);
@@ -72,7 +72,7 @@ body {
 
 .cardMedium {
     background: rgba(28, 28, 28, 0.60);
-    box-shadow: 0 4px 16px 0 rgba(80, 80, 80, 0.25);
+    box-shadow: 0 4px 16px 0 rgba(54, 54, 54, 0.25);
     border: 1.5px solid rgba(135, 135, 135, 0.2);
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
@@ -92,11 +92,13 @@ body {
 
 button{
     cursor: pointer;
+    transition: background 1s ease-in-out;
 }
 
 .btnRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: end;
     gap: 10px;
 }
 

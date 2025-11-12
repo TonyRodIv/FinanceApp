@@ -49,3 +49,7 @@
     background: rgba(53, 53, 53, 0.50);
     color: rgba(255, 255, 255, 0.80);
 }
+
+.bodyInit{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), conic-gradient(from 180deg at 50% 50%, #1C1C1C 0deg, #008D87 360deg);
+}

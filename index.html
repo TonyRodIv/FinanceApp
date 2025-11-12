@@ -13,7 +13,7 @@
     <title> FinanceApp BETA</title>
 </head>
 
-<body id="body">
+<body id="body" class="bodyInit">
     <section class="intro">
         <section class="head" id="temporaryTitleIntro">
             <h2 class="titleHead">FinanceApp</h2>
@@ -30,37 +30,43 @@
             </div>
 
             <div class="form-step" id="step1">
-                <div class="textModal">
-                    <h2 class="titleHead">Adicionar Dívida</h2>
-                    <p class="subTextTitle">Qual o nome da sua dívida?</p>
+                <div class="contentIntroConfig">
+                    <div class="textModal">
+                        <h2 class="titleHead">Adicionar Dívida</h2>
+                        <p class="subTextTitle">Qual o nome da sua dívida?</p>
+                    </div>
+                    <input type="text" id="inputDebtName" placeholder="Ex: Nintendo Switch 2">
                 </div>
-                <input type="text" id="inputDebtName" placeholder="Ex: Nintendo Switch 2">
                 <section class="btnRow">
                     <button class="largeBtn translucentStyle" onclick="reload()">Voltar</button>
-                    <button class="largeBtn oceanBlue" id="nextStep2">Continuar</button>
+                    <button class="largeBtn oceanBlue activeThemeBackground" id="nextStep2">Continuar</button>
                 </section>
             </div>
 
             <div class="form-step" id="step2">
-                <div class="textModal">
-                    <h2 class="titleHead">Valor</h2>
-                    <p class="subTextTitle">Digite o valor total a ser parcelado</p>
+                <div class="contentIntroConfig">
+                    <div class="textModal">
+                        <h2 class="titleHead">Valor</h2>
+                        <p class="subTextTitle">Digite o valor total a ser parcelado</p>
+                    </div>
+                    <input type="number" id="inputTotalDebt" placeholder="R$ 4099,00">
                 </div>
-                <input type="number" id="inputTotalDebt" placeholder="R$ 4099,00">
                 <section class="btnRow">
                     <button class="largeBtn translucentStyle" id="prevStep1">Voltar</button>
-                    <button class="largeBtn oceanBlue" id="nextStep3">Continuar</button>
+                    <button class="largeBtn oceanBlue activeThemeBackground" id="nextStep3">Continuar</button>
                 </section>
             </div>
             <div class="form-step" id="step3">
-                <div class="textModal">
-                    <h2 class="titleHead">Parcelas</h2>
-                    <p class="subTextTitle">Digite o número de parcelas</p>
+                <div class="contentIntroConfig">
+                    <div class="textModal">
+                        <h2 class="titleHead">Parcelas</h2>
+                        <p class="subTextTitle">Digite o número de parcelas</p>
+                    </div>
+                    <input type="number" id="inputInstallments" placeholder="20">
                 </div>
-                <input type="number" id="inputInstallments" placeholder="20">
                 <section class="btnRow">
                     <button class="largeBtn translucentStyle" id="prevStep2">Voltar</button>
-                    <button class="largeBtn oceanBlue" id="nextStep4">Continuar</button>
+                    <button class="largeBtn oceanBlue activeThemeBackground" id="nextStep4">Continuar</button>
                 </section>
             </div>
            <div class="form-step" id="step4">
@@ -86,7 +92,7 @@
                     <label for="colorPink" class="colorSwatch swatch-pink" title="Tema Rosa"></label>
 
                     <input type="radio" id="colorRed" name="themeColor" value="red">
-                    <label for="colorRed" class="colorSwatch swatch-red" title="Tema Vermelho"></label>
+                    <label for="colorRed" class="colorSwatch swatch-red " title="Tema Vermelho"></label>
                 </div>
                 
                 <section class="btnRow">
@@ -100,7 +106,7 @@
 
     <section id="paymentHome" style="display: none;">
         <section class="navContainer" id="previewNav">
-        <div class="nav">
+        <div class="nav" onclick="reload()">
             PREVIEW
         </div>
     </section>

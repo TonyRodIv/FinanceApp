@@ -2,6 +2,12 @@
     display: none;
 
     grid-template-rows: min-content auto;
+    align-items: end;
+    gap: 1.4rem;
+}
+#step0{
+    grid-template-rows: min-content min-content min-content;
+    justify-items: normal;
     gap: 1.4rem;
 }
 
@@ -9,6 +15,10 @@
     display: grid;
     animation: appear 0.5s ease forwards;
 }
+
+/* .form-step .btn-row button{
+    
+} */
 
 /* Estilos para o Seletor de Cores */
 .colorSelector {

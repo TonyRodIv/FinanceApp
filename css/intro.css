@@ -1,51 +1,71 @@
 .intro {
-    width: 100dvw;
-    height: 100dvh;
+  width: 100dvw;
+  height: 100dvh;
 
-    display: grid;
-    grid-template-rows: min-content auto;
-    align-items: end;
+  display: grid;
+  grid-template-rows: min-content auto;
+  align-items: end;
 }
 
 .modalIntro {
-    width: 100%;
-    max-width: 40rem;
-    height: 40dvh;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 40rem;
+  height: 40dvh;
+  margin: 0 auto;
 
-    padding: 2rem 1.6rem;
-    border-radius: 2.5rem 2.5rem 0 0;
-    background: rgba(28, 28, 28, 0.80);
-    box-shadow: 0 4px 16px 0 rgba(80, 80, 80, 0.25);
-    -webkit-backdrop-filter: blur(25px);
-    backdrop-filter: blur(25px);
+  padding: 2rem 1.6rem;
+  border-radius: 2.5rem 2.5rem 0 0;
+  background: rgba(28, 28, 28, 0.80);
+  box-shadow: 0 4px 16px 0 rgba(80, 80, 80, 0.25);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 
-    display: grid;
-    grid-template-rows: min-content min-content min-content;
-    gap: 1.4rem;
-    justify-self: end;
-    animation: appear 0.8s ease forwards;
+  display: grid;
+  /* grid-template-rows: min-content min-content min-content; */
+  gap: 1.4rem;
+  justify-self: end;
+  animation: appear 0.8s ease forwards;
 
-    transition: width 0.5s ease, height 0.5s ease;
+  transition: width 0.5s ease, height 0.5s ease;
 }
 
 .modalIntro .textModal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    gap: 0.3rem;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  gap: 0.3rem;
 }
 
 .subTextTitle {
-    color: rgba(255, 255, 255, 0.70);
-    font-size: 1.15rem;
-    text-align: center;
-    text-decoration: none;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 1.15rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contentIntroConfig {
+  width: 100%;
+}
+
+.contentIntroConfig input {
+  width: 100%;
+  display: flex;
+  padding: 1.2rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.2rem;
+  min-width: 6rem;
+  max-height: fit-content;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #b6b6b6b4;
+  border: 1px solid rgba(74, 74, 74, 0.58);
+    background: rgba(53, 53, 53, 0.50);
 }
 
 
@@ -54,8 +74,21 @@
     width: 100dvw;
     height: 40dvh;
   }
+
   to {
     height: 100dvh;
-    background-color: #000000b4;
+    background-color: #000000;
+  }
+}
+
+@keyframes colorSelect {
+  from {
+    height: 100dvh;
+    background-color: #000000;
+  }
+
+  to {
+    height: 100dvh;
+    background-color: #000000c2;
   }
 }

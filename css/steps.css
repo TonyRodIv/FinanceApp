@@ -9,16 +9,20 @@
     grid-template-rows: min-content min-content min-content;
     justify-items: normal;
     gap: 1.4rem;
+    animation: appear 0.6s ease forwards;
+}
+
+#step4 .colorSelector, #step4 .textModal{
+    animation: fromTheEnd 0.8s ease forwards;
 }
 
 .form-step.active {
     display: grid;
-    animation: appear 0.5s ease forwards;
 }
 
-/* .form-step .btn-row button{
-    
-} */
+.form-step .btn-row button{
+    width: max-content;
+}
 
 /* Estilos para o Seletor de Cores */
 .colorSelector {

@@ -50,6 +50,9 @@
 
 .contentIntroConfig {
   width: 100%;
+  animation: fromTheEnd 0.8s ease forwards;
+  display: grid;
+  gap: 1rem;
 }
 
 .contentIntroConfig input {

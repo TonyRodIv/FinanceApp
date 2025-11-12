@@ -98,7 +98,7 @@ button{
 .btnRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: end;
+    /* justify-items: end; */
     gap: 10px;
 }
 
@@ -119,10 +119,21 @@ button{
 @keyframes appear {
     from{
         opacity: 0.6;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+
+@keyframes fromTheEnd {
+    from{
+        opacity: 0.2;
+        transform: translateX(20px);
+    }
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }

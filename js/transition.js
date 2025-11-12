@@ -39,10 +39,6 @@ function showStep(stepId) {
     document.getElementById(stepId).classList.add('active');
 }
 
-// showStep('step1');
-// modalIntro.style.animation = 'modalToFull 1s ease forwards'
-//     modalIntro.style.position = 'absolute'
-
 document.getElementById('prevStep1').addEventListener('click', () => {
     showStep('step1');
 });
@@ -55,7 +51,6 @@ document.getElementById('prevStep3').addEventListener('click', () => {
 
 document.getElementById('nextStep2').addEventListener('click', () => {
     formData.debtName = document.getElementById('inputDebtName').value;
-
     showStep('step2');
 });
 
@@ -66,7 +61,6 @@ document.getElementById('nextStep3').addEventListener('click', () => {
     showStep('step3');
 });
 document.getElementById('nextStep4').addEventListener('click', () => {
-    // formData.totalDebt = parseFloat(document.getElementById('inputTotalDebt').value);
     showStep('step4');
 });
 

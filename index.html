@@ -60,7 +60,38 @@
                 <input type="number" id="inputInstallments" placeholder="20">
                 <section class="btnRow">
                     <button class="largeBtn translucentStyle" id="prevStep2">Voltar</button>
-                    <button class="largeBtn oceanBlue" id="finishForm">Concluir</button>
+                    <button class="largeBtn oceanBlue" id="nextStep4">Continuar</button>
+                </section>
+            </div>
+           <div class="form-step" id="step4">
+                <div class="textModal">
+                    <h2 class="titleHead">Personalização</h2>
+                    <p class="subTextTitle">Qual cor tema você deseja usar?</p>
+                </div>
+                
+                <div class="colorSelector">
+                    <input type="radio" id="colorOcean" name="themeColor" value="blue" checked>
+                    <label for="colorOcean" class="colorSwatch swatch-ocean" title="Tema Oceano"></label>
+
+                    <input type="radio" id="colorGreen" name="themeColor" value="green">
+                    <label for="colorGreen" class="colorSwatch swatch-green" title="Tema Verde"></label>
+
+                    <input type="radio" id="colorPurple" name="themeColor" value="purple">
+                    <label for="colorPurple" class="colorSwatch swatch-purple" title="Tema Roxo"></label>
+
+                    <input type="radio" id="colorAlert" name="themeColor" value="yellow">
+                    <label for="colorAlert" class="colorSwatch swatch-yellow" title="Tema Amarelo"></label>
+
+                    <input type="radio" id="colorPink" name="themeColor" value="pink">
+                    <label for="colorPink" class="colorSwatch swatch-pink" title="Tema Rosa"></label>
+
+                    <input type="radio" id="colorRed" name="themeColor" value="red">
+                    <label for="colorRed" class="colorSwatch swatch-red" title="Tema Vermelho"></label>
+                </div>
+                
+                <section class="btnRow">
+                    <button class="largeBtn translucentStyle" id="prevStep3">Voltar</button>
+                    <button class="largeBtn oceanBlue activeThemeBackground" id="finishForm">Concluir</button>
                 </section>
             </div>
         </div>

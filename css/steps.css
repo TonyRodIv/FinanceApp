@@ -1,6 +1,6 @@
 .form-step {
     display: none;
-    
+
     grid-template-rows: min-content auto;
     gap: 1.4rem;
 }
@@ -8,4 +8,62 @@
 .form-step.active {
     display: grid;
     animation: appear 0.5s ease forwards;
+}
+
+/* Estilos para o Seletor de Cores */
+.colorSelector {
+    width: 16rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    justify-items: center;
+    gap: 1.2rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.colorSelector input[type="radio"] {
+    display: none;
+}
+
+.colorSwatch {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #414141;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Estilo de "selecionado" */
+.colorSelector input[type="radio"]:checked+.colorSwatch {
+    transform: scale(1.2);
+    border-color: #f9f9f9;
+    /* Cor branca para destacar */
+}
+
+/* NOVAS CLASSES DE COR (para remover o inline style) */
+.swatch-ocean {
+    background-color: #0057B5;
+    background: linear-gradient(0deg, #0057B5 0%, #9D9BDC 100%);
+}
+
+.swatch-green {
+    background: linear-gradient(0deg, #008D87 0%, #7FCA92 100%);
+}
+
+.swatch-purple {
+    background: linear-gradient(0deg, #7C3A9E 0%, #9897D1 100%);
+}
+
+.swatch-yellow {
+    background: linear-gradient(0deg, #BB7C22 0%, #CBBEA7 100%);
+}
+
+.swatch-pink {
+    background: linear-gradient(0deg, #B52290 0%, #B8807D 100%);
+}
+
+.swatch-red {
+    background: linear-gradient(0deg, #7C1817 0%, #B37677 100%);
 }

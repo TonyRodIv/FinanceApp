@@ -39,22 +39,29 @@ function showStep(stepId) {
     document.getElementById(stepId).classList.add('active');
 }
 
-document.getElementById('nextStep2').addEventListener('click', () => {
-    formData.debtName = document.getElementById('inputDebtName').value;
-
-    showStep('step2');
-});
-
 document.getElementById('prevStep1').addEventListener('click', () => {
     showStep('step1');
 });
 document.getElementById('prevStep2').addEventListener('click', () => {
     showStep('step2');
 });
+document.getElementById('prevStep3').addEventListener('click', () => {
+    showStep('step3');
+});
+
+document.getElementById('nextStep2').addEventListener('click', () => {
+    formData.debtName = document.getElementById('inputDebtName').value;
+
+    showStep('step2');
+});
 
 document.getElementById('nextStep3').addEventListener('click', () => {
     formData.totalDebt = parseFloat(document.getElementById('inputTotalDebt').value);
     showStep('step3');
+});
+document.getElementById('nextStep4').addEventListener('click', () => {
+    // formData.totalDebt = parseFloat(document.getElementById('inputTotalDebt').value);
+    showStep('step4');
 });
 
 document.getElementById('finishForm').addEventListener('click', () => {
@@ -63,9 +70,61 @@ document.getElementById('finishForm').addEventListener('click', () => {
     localStorage.setItem('totalDebt', formData.totalDebt);
     localStorage.setItem('installmentsTotal', formData.installmentsTotal);
     localStorage.setItem('installmentsPaid', 0);
+
     document.getElementById('modalIntro').style.display = 'none'; 
     document.getElementById('paymentHome').style.display = 'block';
     const introContainer = document.querySelector('.intro');
     introContainer.remove()
     loadInfo();
+});
+
+let Theme;
+
+const radioButtons = document.querySelectorAll('input[name="themeColor"]');
+const themeBackgroundButtons = document.querySelectorAll('activeThemeBackground');
+
+const Themes = {
+    blue: {
+        backgroundGradient: 'linear-gradient(0deg, #0057B5 0%, #9D9BDC 100%)'
+    },
+    green: {
+        backgroundGradient: 'linear-gradient(0deg, #008D87 0%, #7FCA92 100%)'
+    },
+    purple: {
+        backgroundGradient: 'linear-gradient(0deg, #7C3A9E 0%, #9897D1 100%)'
+    },
+    yellow: {
+        backgroundGradient: 'linear-gradient(0deg, #BB7C22 0%, #CBBEA7 100%)'
+    },
+    pink: {
+        backgroundGradient: 'linear-gradient(0deg, #B52290 0%, #B8807D 100%)'
+    },
+    red: {
+        backgroundGradient: 'linear-gradient(0deg, #7C1817 0%, #B37677 100%)'
+    }
+};
+
+
+
+
+function applyTheme(event) {
+    const valorSelecionado = event.target.value;
+    // console.log('Você selecionou a cor: ' + valorSelecionado);
+    console.log(event);
+
+    for(const color in Themes){
+        if(color === valorSelecionado){
+        console.log(`Sucesso: "${color}"`);
+            themeBackgroundButtons.forEach(button => {
+                
+    });
+    }
+    }
+
+    
+}
+
+radioButtons.forEach(radioButton => {
+    radioButton.addEventListener('change', applyTheme);
+    console.log('clicou')
 });

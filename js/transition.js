@@ -66,15 +66,22 @@ document.getElementById('nextStep4').addEventListener('click', () => {
 
 document.getElementById('finishForm').addEventListener('click', () => {
     formData.installmentsTotal = parseInt(document.getElementById('inputInstallments').value);
+    
+    const selectedColor = document.querySelector('input[name="themeColor"]:checked').value;
+
     localStorage.setItem('debtName', formData.debtName);
     localStorage.setItem('totalDebt', formData.totalDebt);
     localStorage.setItem('installmentsTotal', formData.installmentsTotal);
     localStorage.setItem('installmentsPaid', 0);
+    localStorage.setItem('themeColor', selectedColor);
 
     document.getElementById('modalIntro').style.display = 'none';
     document.getElementById('paymentHome').style.display = 'block';
     const introContainer = document.querySelector('.intro');
-    introContainer.remove()
+    introContainer.remove();
+    
+    applySavedTheme();
+    
     loadInfo();
 });
 
@@ -139,3 +146,12 @@ radioButtons.forEach(radioButton => {
     radioButton.addEventListener('change', applyTheme);
     console.log('clicou')
 });
+
+function applySavedTheme() {
+    const savedColor = localStorage.getItem('themeColor');
+    if (savedColor && Themes[savedColor]) {
+        body.style.background = Themes[savedColor].backgroundGradient;
+        
+        body.classList.remove('bodyInit');
+    }
+}

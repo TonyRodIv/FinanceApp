@@ -89,12 +89,12 @@ let Theme;
 
 const Themes = {
     blue: {
-        backgroundGradient: 'linear-gradient(0deg, #0057B5 0%, #9D9BDC 100%)',
+        backgroundGradient: 'linear-gradient(0deg,#000  0%, #112E40 100%)',
         backgroundSelectScreen: '#1a2d42ff',
         buttonColor:'#529cceff'
     },
     green: {
-        backgroundGradient: 'linear-gradient(0deg, #008D87 0%, #7FCA92 100%)',
+        backgroundGradient: 'linear-gradient(0deg, #0F5850 0%, #385643 100%)',
         backgroundSelectScreen: '#1a2e2dff',
         buttonColor:'#38A88C'
     },
